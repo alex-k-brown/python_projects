@@ -1,0 +1,52 @@
+try:
+
+    current_population = 307357870
+
+    current_year = 2014
+
+    prediction_year = input("Please enter the year to calculate: ")
+
+    year_difference = prediction_year - current_year
+
+    births_per_year = 365 * 24 * 60 * 60 / 7
+
+    deaths_per_year = 365 * 24 * 60 * 60 / 13
+
+    immigrants_per_year = 365 * 24 * 60 * 60 / 35
+
+    new_births = year_difference * births_per_year
+
+    new_deaths = year_difference * deaths_per_year
+
+    new_immigrants = year_difference * immigrants_per_year
+
+    added_population = new_births + new_immigrants - new_deaths
+
+    new_population = current_population + added_population
+
+    print "The new population in", prediction_year, "will change by", added_population, "to be", new_population
+
+
+except NameError:
+    print "*** PlEASE ENTER A NUMERIC VALUE ***"
+
+    import sys
+    import os
+    def restart_program():
+        python = sys.executable
+        os.execl(python, python, * sys.argv)
+
+    if __name__ == "__main__":
+            restart_program()
+
+except ZeroDivisionError:
+    print "*** PLEASE DO NOT DIVIDE BY ZERO ***"
+
+    import sys
+    import os
+    def restart_program():
+        python = sys.executable
+        os.execl(python, python, * sys.argv)
+
+    if __name__ == "__main__":
+            restart_program()

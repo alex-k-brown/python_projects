@@ -1,0 +1,16 @@
+def sum_list(l):
+    sum = 0
+
+    for i in l:
+        sum += i
+
+    return sum
+
+
+def sum_list_recursive(l):
+    if l == []:
+        return 0
+
+    return l.pop() + sum_list_recursive(l)
+
+print sum_list_recursive(4, 6, 3, 9, 12)

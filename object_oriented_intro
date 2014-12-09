@@ -1,0 +1,20 @@
+#Exercise 4
+
+class Person(object):
+
+    def __init__(self, name, age, birthday, address):
+        self.name = name
+        self.age = age
+        self.birthday = birthday
+        self.address = address
+    def __str__(self):
+
+        return ("Person name: " + self.name +
+        ", Person age: " + str(self.age) +
+        ", Person birthday: " + self.birthday +
+        ", Person Address: " + self.address) \
+
+daniel = Person("Daniel", 27, "07/08/1991", "1221 1st St")
+
+
+print daniel
